@@ -31,13 +31,12 @@ window.addEventListener("resize", () => {
   mobileSlider();
 });
 
-let elem = document.querySelector("#elem");
-let show = document.querySelector("#show");
+let elem = document.querySelector(".elem");
+let show = document.querySelector(".show");
 
 show.addEventListener("click", function (event) {
-  event.preventDefault();
   elem.classList.toggle("hidden");
-  if (this.textContent === "Показать все") {
+  if (show.classList.contains("btn__show")) {
     this.textContent = "Скрыть";
   } else {
     this.textContent = "Показать все";
